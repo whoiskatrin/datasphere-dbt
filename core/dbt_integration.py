@@ -3,7 +3,7 @@
 from soda.soda_adapter import SodaAdapter
 from core.config_parser import read_config, parse_config
 from great_expectations.great_expectations_adapter import GreatExpectationsAdapter
-from datadiff.datafold_adapter import DatafoldAdapter
+from datadiff.datadiff_adapter import DataDiffAdapter
 
 def consolidate_results(adapters):
     consolidated_results = {}
@@ -36,12 +36,12 @@ def run_data_quality_checks(config_path):
 
     soda_adapter = SodaAdapter()
     great_expectations_adapter = GreatExpectationsAdapter()
-    datafold_adapter = DatafoldAdapter()
+    datadiff_adapter = DataDiffAdapter()
 
     adapters = {
         'soda': soda_adapter,
         'great_expectations': great_expectations_adapter,
-        'datadiff': datafold_adapter,
+        'datadiff': datadiff_adapter,
     }
 
     for adapter_name, adapter in adapters.items():
