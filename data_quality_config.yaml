@@ -1,0 +1,39 @@
+soda:
+  connection:
+    type: <your_database_type>
+    host: <your_database_host>
+    port: <your_database_port>
+    username: <your_database_username>
+    password: <your_database_password>
+    database: <your_database_name>
+  tables:
+    - name: <table_name>
+      tests:
+        - <test_name>: <test_parameters>
+
+great_expectations:
+  datasource:
+    name: <datasource_name>
+    type: <datasource_type>
+    connection:
+      host: <your_database_host>
+      port: <your_database_port>
+      username: <your_database_username>
+      password: <your_database_password>
+      database: <your_database_name>
+  expectations:
+    - table: <table_name>
+      rules:
+        - <expectation_name>: <expectation_parameters>
+
+datadiff:
+  connection:
+    type: <your_database_type>
+    host: <your_database_host>
+    port: <your_database_port>
+    username: <your_database_username>
+    password: <your_database_password>
+    database: <your_database_name>
+  tests:
+    - name: <test_name>
+      parameters: <test_parameters>
